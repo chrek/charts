@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Working with Chart.js</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+<body>
+  <h2>Working with Chart.js</h2>
+  <canvas id="chart"></canvas>
+  <script>
+    var chart = new Chart('chart', {
+      type: 'horizontalBar',
+      data: {
+        labels: ['A', 'B', 'C'],
+        datasets: [
+          {
+            data: [10, 20, 30],
+            label: 'Before',
+            backgroundColor: '#00008b'
+          },
+          {
+            data: [50, 30, 40],
+            label: 'After',
+            backgroundColor: '#ff00ff'
+          }
+        ]
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>  
+</body>
+</html> 
